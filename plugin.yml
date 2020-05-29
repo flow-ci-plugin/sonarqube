@@ -1,0 +1,23 @@
+name: sonarqube
+version: 0.0.1
+
+inputs:
+- name: SONAR_HOST_URL
+  type: string
+  required: true
+
+- name: SONAR_TOKEN
+  type: string
+  required: true
+
+- name: SONAR_PROJECT_KEY
+  type: string
+  required: true
+
+- name: SONAR_SCANNER_OPTS
+  type: string
+  required: false
+
+script: |
+  plugindir=${FLOWCI_AGENT_PLUGIN_DIR}/sonarqube
+  ${plugindir}/src/run.sh
