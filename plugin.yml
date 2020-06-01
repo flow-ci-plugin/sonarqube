@@ -1,12 +1,13 @@
 name: sonarqube
 version: 0.0.1
+icon: "icon.svg"
 
 inputs:
-- name: SONAR_HOST_URL
+- name: FLOWCI_GIT_REPO
   type: string
   required: true
 
-- name: SONAR_TOKEN
+- name: SONAR_HOST_URL
   type: string
   required: true
 
@@ -14,10 +15,19 @@ inputs:
   type: string
   required: true
 
+- name: SONAR_TOKEN_SECRET
+  type: secret
+  required: true
+
+- name: SONAR_PROPRITY_CONFIG
+  type: config
+  required: false
+
 - name: SONAR_SCANNER_OPTS
   type: string
   required: false
 
 script: |
   plugindir=${FLOWCI_AGENT_PLUGIN_DIR}/sonarqube
+  cd $FLOWCI_GIT_REPO
   ${plugindir}/src/run.sh
