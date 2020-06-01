@@ -23,10 +23,6 @@ inputs:
   type: config
   required: false
 
-- name: SONAR_SCANNER_OPTS
-  type: string
-  required: false
-
 script: |
   plugindir=${FLOWCI_AGENT_PLUGIN_DIR}/sonarqube
   cd $FLOWCI_GIT_REPO

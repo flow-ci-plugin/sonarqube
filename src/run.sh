@@ -9,7 +9,7 @@ findFile()
     return 1
 }
 
-sonar_ops="-Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.sources=. -Dsonar.login=${SONAR_TOKEN} -Dsonar.qualitygate.wait=true"
+sonar_ops="-Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_TOKEN} -Dsonar.qualitygate.wait=true"
 
 # detect project type
 if findFile "pom.xml"; then
@@ -19,5 +19,6 @@ elif findFile "build.gradle"; then
     echo "Gradle projecte detected"
     ./gradlew sonarqube ${sonar_ops}
 else
+    export SONAR_PROJECT_BASE_DIR=${FLOWCI_GIT_REPO}
     sonar-scanner ${sonar_ops}
 fi

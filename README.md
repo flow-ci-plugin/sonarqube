@@ -1,5 +1,17 @@
 # sonarqube plugin
 
+## Description
+
+
+## Inputs
+
+- `FLOWCI_GIT_REPO` (required): git repo name
+- `SONAR_HOST_URL` (required): Sonarqube host url, ex: <http://ip:port>
+- `SONAR_PROJECT_KEY` (required): Sonarqube project key
+- `SONAR_TOKEN_SECRET` (required): a secret created from admin -> secret, that store token from Sonarqube
+- `SONAR_PROPRITY_CONFIG`: git repo name
+
+
 ## For Maven project
 
 ```yml
@@ -15,7 +27,7 @@ steps:
     envs:
       SONAR_HOST_URL: "localhost:9000"
       SONAR_PROJECT_KEY: "your_project_key"
-      SONAR_TOKEN_SECRET: "your_token" # ex: 263c571e392ce0df5235ca47b326537f1f2a42d4
+      SONAR_TOKEN_SECRET: "secret_name_created_from_ci_admin"
     plugin: "sonarqube"
 ```
 
@@ -43,7 +55,7 @@ steps:
     envs:
       SONAR_HOST_URL: "localhost:9000"
       SONAR_PROJECT_KEY: "your_project_key"
-      SONAR_TOKEN_SECRET: "your_token" # ex: 263c571e392ce0df5235ca47b326537f1f2a42d4
+      SONAR_TOKEN_SECRET: "secret_name_created_from_ci_admin"
     plugin: "sonarqube"
 ```
 
@@ -62,6 +74,6 @@ steps:
     envs:
       SONAR_HOST_URL: "localhost:9000"
       SONAR_PROJECT_KEY: "your_project_key"
-      SONAR_TOKEN_SECRET: "your_token" # ex: 263c571e392ce0df5235ca47b326537f1f2a42d4
+      SONAR_TOKEN_SECRET: "secret_name_created_from_ci_admin"
     plugin: "sonarqube"
 ```
