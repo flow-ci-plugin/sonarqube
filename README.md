@@ -2,6 +2,7 @@
 
 ## Description
 
+Execute Sonarqube scanner
 
 ## Inputs
 
@@ -9,8 +10,6 @@
 - `SONAR_HOST_URL` (required): Sonarqube host url, ex: <http://ip:port>
 - `SONAR_PROJECT_KEY` (required): Sonarqube project key
 - `SONAR_TOKEN_SECRET` (required): a secret created from admin -> secret, that store token from Sonarqube
-- `SONAR_PROPRITY_CONFIG`: git repo name
-
 
 ## For Maven project
 

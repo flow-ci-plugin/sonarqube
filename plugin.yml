@@ -19,10 +19,6 @@ inputs:
   type: secret
   required: true
 
-- name: SONAR_PROPRITY_CONFIG
-  type: config
-  required: false
-
 script: |
   plugindir=${FLOWCI_AGENT_PLUGIN_DIR}/sonarqube
   cd $FLOWCI_GIT_REPO
