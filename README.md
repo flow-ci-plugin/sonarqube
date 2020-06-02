@@ -24,7 +24,7 @@ steps:
     docker:
       image: maven:latest
     envs:
-      SONAR_HOST_URL: "localhost:9000"
+      SONAR_HOST_URL: "http://localhost:9000"
       SONAR_PROJECT_KEY: "your_project_key"
       SONAR_TOKEN_SECRET: "secret_name_created_from_ci_admin"
     plugin: "sonarqube"
@@ -52,7 +52,7 @@ steps:
     docker:
       image: gradle:latest
     envs:
-      SONAR_HOST_URL: "localhost:9000"
+      SONAR_HOST_URL: "http://localhost:9000"
       SONAR_PROJECT_KEY: "your_project_key"
       SONAR_TOKEN_SECRET: "secret_name_created_from_ci_admin"
     plugin: "sonarqube"
@@ -71,7 +71,7 @@ steps:
     docker:
       image: sonarsource/sonar-scanner-cli:latest
     envs:
-      SONAR_HOST_URL: "localhost:9000"
+      SONAR_HOST_URL: "http://localhost:9000"
       SONAR_PROJECT_KEY: "your_project_key"
       SONAR_TOKEN_SECRET: "secret_name_created_from_ci_admin"
     plugin: "sonarqube"
