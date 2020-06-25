@@ -6,7 +6,6 @@ Execute Sonarqube scanner
 
 ## Inputs
 
-- `FLOWCI_GIT_REPO` (required): git repo name
 - `SONAR_HOST_URL` (required): Sonarqube host url, ex: <http://ip:port>
 - `SONAR_PROJECT_KEY` (required): Sonarqube project key
 - `SONAR_TOKEN_SECRET` (required): a secret created from admin -> secret, that store token from Sonarqube
@@ -17,7 +16,6 @@ Execute Sonarqube scanner
 envs:
   FLOWCI_GIT_URL: "your_git_project_url"
   FLOWCI_GIT_BRANCH: "master"
-  FLOWCI_GIT_REPO: "project_name"
 
 steps:
   - name: sonarqube check

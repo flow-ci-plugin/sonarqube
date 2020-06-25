@@ -3,10 +3,6 @@ version: 0.0.1
 icon: "icon.svg"
 
 inputs:
-- name: FLOWCI_GIT_REPO
-  type: string
-  required: true
-
 - name: SONAR_HOST_URL
   type: string
   required: true
