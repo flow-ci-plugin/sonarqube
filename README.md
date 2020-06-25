@@ -43,7 +43,6 @@ steps:
 envs:
   FLOWCI_GIT_URL: "your_git_project_url"
   FLOWCI_GIT_BRANCH: "master"
-  FLOWCI_GIT_REPO: "project_name"
 
 steps:
   - name: sonarqube check
@@ -62,7 +61,6 @@ steps:
 envs:
   FLOWCI_GIT_URL: "your_git_project_url"
   FLOWCI_GIT_BRANCH: "master"
-  FLOWCI_GIT_REPO: "project_name"
 
 steps:
   - name: sonarqube check
